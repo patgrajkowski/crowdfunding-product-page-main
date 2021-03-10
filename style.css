@@ -41,6 +41,10 @@ header section {
     align-items: center;
     justify-content: space-between;
 }
+header section > span:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 main {
     font-size: 1rem;
     display: flex;
