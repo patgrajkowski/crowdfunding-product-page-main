@@ -19,7 +19,8 @@
   <header>
     <div>
       <img class = 'logo' src = './images/logo.svg' alt = 'logo'></img>
-      <section>
+      <section class = 'menu'>
+        <img class = 'hamburger-button hide-on-desktop' src = '/images/icon-hamburger.svg' alt = 'icon-hamburger'>
         <span class = 'semi-bold'>About</span>
         <span class = 'semi-bold'>Discover</span>
         <span class = 'semi-bold'>Get Started</span>
@@ -35,12 +36,20 @@
     </section>
     <section class = 'statistics'>
       <div class = 'columns'>
-        <h1 class = 'big'>$89,914</h1>
-        <p>of $100,000 backed</p>
-        <h1 class = 'big'>5,007</h1>
-        <p>total backers</p>
-        <h1 class = 'big'>56</h1>
-        <p>days left</p>
+        <div class = 'already-backed'>
+          <h1 class = 'big'>$89,914</h1>
+          <p>of $100,000 backed</p>
+        </div>
+        <span class = 'hide-on-desktop'> </span>
+        <div class = 'backers'>
+          <h1 class = 'big'>5,007</h1>
+          <p>total backers</p>
+        </div>
+        <span class = 'hide-on-desktop'> </span>
+        <div class = 'days-left'>
+          <h1 class = 'big'>56</h1>
+          <p>days left</p>
+        </div>
         <div class = 'progress-bar'><div class = 'progress'></div></div>
       </div>
     </section>
