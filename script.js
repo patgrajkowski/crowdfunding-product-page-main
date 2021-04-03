@@ -8,7 +8,6 @@ const closeMenu = (event) => {
     }
 };
 const toggleMenu = () => {
-    console.log('xd');
     if(hamburgerMenu.style.display === '' || hamburgerMenu.style.display === 'none'){
         hamburgerMenu.style.display = 'flex';
         wrapper.style.position = 'fixed';
