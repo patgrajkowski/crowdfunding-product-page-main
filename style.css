@@ -33,6 +33,9 @@ header > div {
     padding-right: 10.313rem;
     padding-top: 2.813rem;
 }
+header > div > .menu {
+    display: block;
+}
 header > div > .menu > div {
     display: flex;
     width: 14.063rem;

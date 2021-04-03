@@ -9,12 +9,12 @@ const closeMenu = (event) => {
     }
 };
 const toggleMenu = () => {
-    if(hamburgerMenu.style.display === '' || hamburgerMenu.style.display === 'none'){
+    if(hamburgerMenu.style.display === ''){
         hamburgerMenu.style.display = 'flex';
         wrapper.style.position = 'fixed';
         hamburgerButton.src = './images/icon-close-menu.svg'
     }else{
-        hamburgerMenu.style.display = 'none';
+        hamburgerMenu.style.display = '';
         wrapper.style.position = '';
         hamburgerButton.src = './images/icon-hamburger.svg'
 
