@@ -33,7 +33,7 @@ header > div {
     padding-right: 10.313rem;
     padding-top: 2.813rem;
 }
-header .menu {
+header > div > .menu > div {
     display: flex;
     width: 14.063rem;
     font-size: 0.875rem;
@@ -223,6 +223,12 @@ h1 {
         margin: 0;
         padding: 0;
     }
+    .hide-on-mobile{
+        display: none;
+    }
+    .hide-on-desktop{
+        display: block;
+    }
     header {
         height: 18.75rem;
         background: linear-gradient(to top, rgba(255,255,255,0) 10%,
@@ -232,14 +238,57 @@ h1 {
     }
     header > div {
         padding: 0;
-        display: flex;
-        justify-content: space-around;
-    }
-    .hide-on-mobile{
-        display: none;
-    }
-    .hide-on-desktop{
         display: block;
+    }
+    header > div > .wrapper >  .logo {
+        float: left;
+        margin: 35px 25px;
+        display: block;
+    }
+    header > div > .wrapper {
+        z-index: 2;
+        position: block;
+        width: 100%;
+    }
+    header > div > .wrapper > .hamburger-button {
+        float: right;
+        margin: 35px 25px;
+    }
+    header > div > .menu{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: fixed;
+        background-color: rgba(0,0,0,0.3);
+        align-items: center;
+    }
+    header > div > .menu > div {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        position:fixed;
+        top: 76px;
+    }
+    header > div > .menu > div > span {
+        display: flex;
+        padding-left: 25px;
+        width: calc(100% - 25px);
+        height: 70px;
+        align-items: center;
+        box-shadow: 0px 0px 2px 1px rgba(122,122,122,0.2);
+        background-color: white;
+        color: black;
+        font-size: 1.1rem;
+    }
+    header > div > .menu > div > span:first-child{
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+    }
+    header > div > .menu > div > span:last-child{
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
     .hamburger-button {
         cursor: pointer;

@@ -7,6 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel = 'stylesheet'href = './style.css'>
+  <script src="script.js" defer></script>
   <title>Frontend Mentor | Crowdfunding product page</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -18,13 +19,17 @@
 <body>
   <header>
     <div>
-      <img class = 'logo' src = './images/logo.svg' alt = 'logo'></img>
-      <section class = 'menu'>
-        <img class = 'hamburger-button hide-on-desktop' src = '/images/icon-hamburger.svg' alt = 'icon-hamburger'>
-        <span class = 'semi-bold'>About</span>
-        <span class = 'semi-bold'>Discover</span>
-        <span class = 'semi-bold'>Get Started</span>
-      </section>
+      <div class = 'wrapper'>
+        <img class = 'logo' src = './images/logo.svg' alt = 'logo'></img>
+        <img class = 'hamburger-button hide-on-desktop' id = 'hamburger-button' src = '/images/icon-hamburger.svg' alt = 'icon-hamburger'>
+      </div>
+      <nav class = 'menu' id = 'menu'>
+        <div>
+          <span class = 'semi-bold'>About</span>
+          <span class = 'semi-bold'>Discover</span>
+          <span class = 'semi-bold'>Get Started</span>
+        </div>
+      </nav>
     </div>
   </header>
   <main>
