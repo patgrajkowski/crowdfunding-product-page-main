@@ -138,11 +138,15 @@ h1 {
     display: flex;
     justify-content: start;
 }
+
 .mastercraft >.buttons > .bookmarkbtn:hover {
     opacity: 70%;
 }
 .mastercraft >.buttons > .bookmarkbtn > img{
     margin-right: 1rem;
+}
+.mastercraft >.buttons > .bookmarked {
+    color: hsl(176, 72%, 28%);
 }
 .statistics {
     height: 13.125rem;
