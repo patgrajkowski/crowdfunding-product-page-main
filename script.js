@@ -6,7 +6,6 @@ let bookmarked = false;
 let hamburgerMenuActive = false;
 const bookmarkImg = document.getElementById('bookmark-img');
 let mobileView;
-const checkView = () => mobileView = window.matchMedia("(max-width: 600px)").matches ? true : false;
 const closeMenu = (event) => {
     if(event.target === hamburgerMenu){
         hamburgerMenu.style.display = 'none';
@@ -17,10 +16,8 @@ const closeMenu = (event) => {
 const toggleMenu = () => {
     if(!hamburgerMenuActive){
         hamburgerMenuActive = true;
-        wrapper.classList.add('hamburger-menu-acitve');
-        hamburgerMenu.classList.add('hambureger-menu-active');
-       /*  hamburgerMenu.style.display = 'flex';
-        wrapper.style.position = 'fixed';*/
+        hamburgerMenu.style.display = 'flex';
+        wrapper.style.position = 'fixed';
         hamburgerButton.src = './images/icon-close-menu.svg'
 
     }else{
@@ -47,19 +44,21 @@ const toggleBookmark = () => {
         bookmarked = false;
     }
 }
-const changeViewBookmark = () => {
+const changeView = () => {
+    mobileView = window.matchMedia("(max-width: 600px)").matches ? true : false;
     if(mobileView && bookmarked){
         document.getElementById('bookmark-text').innerText = '';
-        bookmarkButton.style.paddingRight = '';
     }
     if(!mobileView && bookmarked){
         document.getElementById('bookmark-text').innerText = 'Bookmarked';
-        bookmarkButton.style.paddingRight = '1.5rem';
+        bookmarkButton.classList.add('bookmarked');
+    }
+    if(!mobileView && hamburgerMenuActive ){
+        toggleMenu();
     }
 }
-checkView();
-window.matchMedia("(max-width: 600px)").addEventListener('change',checkView);changeViewBookmark
-window.matchMedia("(max-width: 600px)").addEventListener('change',changeViewBookmark);
+changeView();
+window.matchMedia("(max-width: 600px)").addEventListener('change',changeView);
 hamburgerButton.addEventListener('click',toggleMenu);
 window.addEventListener('click', closeMenu);
 bookmarkButton.addEventListener('click', toggleBookmark);
