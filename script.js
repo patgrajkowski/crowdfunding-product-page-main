@@ -13,15 +13,16 @@ const closeMenu = (event) => {
 };
 const toggleMenu = () => {
     if(hamburgerMenu.style.display === ''){
-        hamburgerMenu.style.toggle = 'flex';
+        console.log('if');
+        hamburgerMenu.style.display = 'flex';
         wrapper.style.position = 'fixed';
         hamburgerButton.src = './images/icon-close-menu.svg'
 
     }else{
+        console.log('else');
         hamburgerMenu.style.display = '';
         wrapper.style.position = '';
         hamburgerButton.src = './images/icon-hamburger.svg'
-
     }
 };
 const toggleBookmark = () => {
