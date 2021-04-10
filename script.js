@@ -8,9 +8,7 @@ const bookmarkImg = document.getElementById('bookmark-img');
 let mobileView;
 const closeMenu = (event) => {
     if(event.target === hamburgerMenu){
-        hamburgerMenu.style.display = 'none';
-        wrapper.style.position = '';
-        hamburgerButton.src = './images/icon-hamburger.svg'
+        toggleMenu();
     }
 };
 const toggleMenu = () => {
