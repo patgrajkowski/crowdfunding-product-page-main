@@ -36,13 +36,20 @@ header > div {
 header > div > .menu {
     display: block;
 }
-header > div > .menu > div {
+header > div > .menu > ul {
     display: flex;
     width: 14.063rem;
     font-size: 0.875rem;
-    color: white;
     align-items: center;
     justify-content: space-between;
+    list-style-type: none;
+}
+header > div > .menu > ul > li > a{
+    color: white;
+    text-decoration: none;
+}
+header > div > .menu > ul > li > a:hover{
+    text-decoration: underline;
 }
 header section > span:hover {
     cursor: pointer;
@@ -137,6 +144,7 @@ h1 {
     color: hsl(0, 0%, 48%);
     display: flex;
     justify-content: start;
+    transition: all 0.3s ease-in-out;
 }
 
 .mastercraft >.buttons > .bookmarkbtn:hover {
@@ -146,7 +154,11 @@ h1 {
     margin-right: 1rem;
 }
 .mastercraft >.buttons > .bookmarked {
-    color: hsl(176, 72%, 28%);
+    margin-left: -1.5rem;
+    width: 12.125rem;
+}
+.mastercraft >.buttons > .bookmarked > .bookmarked-color{
+    color:hsl(176, 72%, 28%);
 }
 .statistics {
     height: 13.125rem;
@@ -271,14 +283,14 @@ h1 {
         background-color: rgba(0,0,0,0.3);
         align-items: center;
     }
-    header > div > .menu > div {
+    header > div > .menu > ul {
         display: flex;
         flex-direction: column;
         width: 90%;
         position:fixed;
         top: 76px;
     }
-    header > div > .menu > div > span {
+    header > div > .menu > ul > li {
         display: flex;
         padding-left: 25px;
         width: calc(100% - 25px);
@@ -286,19 +298,27 @@ h1 {
         align-items: center;
         box-shadow: 0px 0px 2px 1px rgba(122,122,122,0.2);
         background-color: white;
-        color: black;
         font-size: 1.1rem;
     }
-    header > div > .menu > div > span:first-child{
+    header > div > .menu > ul > li > a {
+        color: black;
+    }
+    header > div > .menu > ul > li:first-child{
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
-    header > div > .menu > div > span:last-child{
+    header > div > .menu > ul > li:last-child{
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
     }
     .hamburger-button {
         cursor: pointer;
+    }
+    header > div >.hamburger-menu-active{
+        position: fixed
+    }
+    header > div > .menu >.hamburger-menu-active{
+        display: flex;
     }
     main {
         font-size: 14px;
